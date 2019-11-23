@@ -1,0 +1,8 @@
+CREATE TABLE factor (clave_factor int, nombre_factor varchar(45), unidad_de_medida varchar(45), desviacion varchar(45), especificacion varchar(45), PRIMARY KEY (clave_factor));
+CREATE TABLE analisis (factor_analisis int, limite_superior int, limite_inferior int, num_inspeccion int, harina varchar(45), lote int, primero varchar(45), PRIMARY KEY (factor_analisis));
+CREATE TABLE factores_cliente (analisis int, rango varchar(45), desviacion varchar(45), factor varchar(45), PRIMARY KEY (analisis));
+CREATE TABLE certificado (lote int, inspeccion varchar(45), orden_compra int, cantidad int, cantidad_tot int, factura varchar(45), fecha_envio varchar(45),PRIMARY KEY (lote));
+CREATE TABLE cliente (alta int, id_cliente int, nombre varchar(45), rfc varchar(45), domicilio varchar(45), nombre_contacto varchar(45), clave_doc_espec varchar(45), datos_analisis varchar(45), factor_cliente varchar(45), PRIMARY KEY (alta));
+CREATE TABLE equipo (clavedelequipo int, des_corta varchar(45), marca varchar(45), modelo varchar(45), serie int, proveedor varchar (45), fecha_adquisicion int, garantia varchar(45), ubicacion varchar(45), responsable varchar(45), mantenimiento varchar(45), primary key (clavedelequipo));
+CREATE TABLE usuarios_login (nombre_usuario int, administrador boolean, contraseña varchar(45), PRIMARY KEY (nombre_usuario));                                                                                                                                           an, contraseña varchar(45), PRIMARY KEY (nombre_usuario));
+
