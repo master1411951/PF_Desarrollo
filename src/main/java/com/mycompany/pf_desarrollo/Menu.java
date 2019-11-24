@@ -10,7 +10,7 @@ package com.mycompany.pf_desarrollo;
  * @author JuanAntonio
  */
 public class Menu extends javax.swing.JFrame {
-
+    int id;
     /**
      * Creates new form Menu
      */
@@ -18,6 +18,9 @@ public class Menu extends javax.swing.JFrame {
         initComponents();
     }
     
+    public Menu(int id){
+        this.id=id;
+    }
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -40,6 +43,11 @@ public class Menu extends javax.swing.JFrame {
         jButton1.setText("Cliente");
 
         jButton2.setText("Equipo");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Registro Analisis");
 
@@ -86,6 +94,13 @@ public class Menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+        Equipo equipo = new Equipo(id);
+        equipo.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
